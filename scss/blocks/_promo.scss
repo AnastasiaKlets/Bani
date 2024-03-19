@@ -39,6 +39,12 @@
     &_item {
         position: relative;
         width: 50%;
+        &_content {
+            position: absolute;
+            bottom: 0;
+            z-index: 2;
+            padding: 0 0 6.87% 5.93%;
+        }
     }
     &_image {
         position: absolute;
@@ -54,5 +60,29 @@
     &_content {
         position: absolute;
         z-index: 2;
+        padding: 8.17% 0 0 9.16%;
+        width: 52%;
+        &_contact {
+            display: flex;
+            align-items: center;
+            gap: 29px;
+            img {
+                width: 43px;
+                height: 43px;
+            }
+            a {
+                text-decoration: none;
+            }
+        }
+        .title_55 {
+            margin-top: 53px;
+        }
+        .medium {
+            margin-top: 34px;
+            max-width: 690px;
+        }
+        .btn {
+            margin-top: 27px;
+        }
     }
 }

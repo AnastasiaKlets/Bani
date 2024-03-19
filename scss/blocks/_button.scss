@@ -1,0 +1,22 @@
+.btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 0 3px;
+	border-radius: 10px;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	&_main {
+        height: 59px;
+        background: #008a34;
+        font-weight: 600;
+        font-size: 20px;
+        color: #fff;
+        &_promo {
+            width: 31.2%;
+            background: linear-gradient(90deg, #008a34 0%, #5ba075 50.5%, #068335 100%);
+        }
+	}
+}
