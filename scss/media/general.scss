@@ -1,0 +1,17 @@
+@import 'promo';
+
+.hide {
+	display: none;
+}
+.show {
+	display: block;
+}
+.flex {
+	display: flex;
+} 
+
+@media (max-width: 768px) {
+    .container {
+        width: 86.666%;
+    }
+}

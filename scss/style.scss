@@ -1,0 +1,20 @@
+@import 'base/fonts';
+
+* {
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+}
+
+.container {
+	max-width: 1568px;
+	width: 81.666%;
+    margin: 0 auto;
+}
+
+.br {
+	display: none;
+} 
+
+@import 'blocks/promo';
+@import 'media/general';
