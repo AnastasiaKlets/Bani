@@ -75,6 +75,10 @@
                 text-decoration: none;
             }
         }
+        &_numbers {
+            display: flex;
+            flex-direction: column;
+        }
         .title_55 {
             margin-top: 53px;
         }
