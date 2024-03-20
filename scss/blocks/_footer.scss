@@ -1,0 +1,42 @@
+footer{
+  background: #000;
+}
+.footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  color: #ffffff;
+  gap: 35px;
+  padding: 25px 0 15px 0 ;
+}
+.footer_Logo_text{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 100px;
+}
+.footer_logo_number{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer_img_number{
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.footer_number{
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  font-size: 24px;
+}
+.footer_text{
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono", "Droid Sans Mono", monospace, monospace;
+  font-weight: 400;
+  font-size: 16px;
+}
