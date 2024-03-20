@@ -11,7 +11,58 @@
 
 }
 @media (max-width: 992px) {
-
+    .promo {
+        &_gradient {
+            img {
+                position: absolute;
+                width: 200%;
+                height: 57.65%;
+            }
+        }
+        &_gradient.top {
+            display: none;
+        }
+        &_top {
+            height: 52%;
+            background: #000;
+            &_image {
+                bottom: 0;
+                width: 82%;
+            }
+        }
+        &_bottom {
+            flex-direction: column;
+            height: 48%;
+        }
+        &_item {
+            width: 100%;
+            &_content {
+                padding: 0 0 11.3% 7.22%;
+            }
+        }
+        &_image.top {
+            bottom: 0;
+            width: 100%;
+            height: 55.85%;
+        }
+        &_content {
+            padding: 23.6% 5% 0 7.22%;
+            width: calc(100% - 7.22% - 5%);
+            &_contact {
+                display: none;
+            }
+            .title_55 {
+                margin-top: 0;
+            }
+            .medium {
+                margin-top: 12px;
+                max-width: 100%;
+            }
+            .btn {
+                margin-top: 22px;
+            }
+        }
+    }
 }
 @media (max-width: 768px) {
 
