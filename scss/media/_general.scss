@@ -8,10 +8,14 @@
 }
 .flex {
 	display: flex;
-} 
+}
+.container{
+  overflow: hidden;
+}
 
 @media (max-width: 768px) {
     .container {
         width: 86.666%;
     }
+
 }
