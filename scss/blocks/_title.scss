@@ -1,12 +1,15 @@
 .title {
     font-size: 20px;
     font-weight: 400;
-    color: #fff;
+    color: #000;
     &_24 {
         font-size: 24px;
     }
     &_55 {
         font-size: 55px;
+    }
+    &_64 {
+        font-size: 64px;
     }
 }
 .medium {

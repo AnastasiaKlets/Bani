@@ -1,5 +1,4 @@
 .promo {
-    width: 100vw; 
     height: 100vh; 
     overflow: hidden;
     &_wrapper {
@@ -89,5 +88,8 @@
         .btn {
             margin-top: 27px;
         }
+    }
+    .title {
+        color: #fff;
     }
 }
