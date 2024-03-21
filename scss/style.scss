@@ -15,7 +15,8 @@
 
 .br {
 	display: none;
-} 
+}
+
 
 @import 'blocks/title';
 @import 'blocks/button';
@@ -23,3 +24,5 @@
 @import 'media/general';
 @import "blocks/footer";
 @import "media/footer";
+@import "blocks/possible_ordering";
+@import "media/possible_ordering";
