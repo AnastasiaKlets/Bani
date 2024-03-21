@@ -5,9 +5,27 @@
     &_24 {
         font-size: 24px;
     }
+    &_40{
+        font-size: 40px;
+    }
     &_55 {
         font-size: 55px;
     }
+    &_64{
+        font-size: 64px;
+    }
+}
+.thin{
+    font-weight: 100;
+}
+.extraLight{
+    font-weight: 200;
+}
+.light{
+    font-weight: 300;
+}
+.normal{
+    font-weight: 400;
 }
 .medium {
 	font-weight: 500;
@@ -15,9 +33,18 @@
 .semi-bold {
 	font-weight: 600;
 }
-.arkhip {
-    font-family: 'Arkhip';
+.bold{
+    font-weight: 700;
 }
-.cofo {
-    font-family: 'CoFo Sans';
+.extraBold{
+    font-weight: 700;
+}
+.arkhip{
+    font-family: "Arkhip", serif;
+}
+.cofo{
+    font-family: "CoFo Sans", sans-serif;
+}
+.montserrat{
+    font-family: "Montserrat", sans-serif;
 }
