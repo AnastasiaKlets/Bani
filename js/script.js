@@ -1,29 +1,33 @@
-function slider({container, wrapper, field, slide, indicatorsSelector, elementsQuantity = 1, duration = 0, rowGap = 0}) {
+function slider({container, wrapper, field, slide, indicatorsSelector, elementsPerPage = 1, duration = 0, rowGap = 0}) {
     let slideIndex = 1,
         offset = 0,
         mobile = false,
         timer = 0,
+        templates = [],
         dots = [];
-    const slides = document.querySelectorAll(slide),
-        slider = document.querySelector(container),
+    const slider = document.querySelector(container),
         slidesWrapper = document.querySelector(wrapper),
         slidesField = document.querySelector(field),
         mediaQuery = window.matchMedia('(max-width: 768px)');
 
-    let width = deleteNotDigits(window.getComputedStyle(slidesWrapper).width) / elementsQuantity + 'px';
+    let width = deleteNotDigits(window.getComputedStyle(slidesWrapper).width) / elementsPerPage + 'px';
 
     let indicators = document.createElement('ol');
     indicators.classList.add(indicatorsSelector);
     slider.append(indicators);
 
-    slidesField.style.width = 100 * slides.length + slides.length / elementsQuantity + "%";  
+    let slides = document.querySelectorAll(slide);
+    slidesField.style.width = 100 * (slides.length + elementsPerPage - 1) / elementsPerPage + "%";  
 
     slides.forEach((slide, index) => {
         slide.style.width = width;
         if (index != 0) {
             slide.style.paddingLeft = rowGap + 'px';
         }
+        templates[index] = slide;
     });
+    
+    
     if (mediaQuery.matches) {
         mobile = true;
     }
@@ -40,6 +44,10 @@ function slider({container, wrapper, field, slide, indicatorsSelector, elementsQ
         dots.push(dot);
     }
 
+    for (let i = 0; i < (elementsPerPage - 1); i++) {
+        slidesField.append(templates[i + 1].cloneNode(true));
+    }
+
     dots.forEach(dot => {
         dot.addEventListener('click', (e) => {
             const slideTo = e.target.getAttribute('data-slide-to');
@@ -51,7 +59,8 @@ function slider({container, wrapper, field, slide, indicatorsSelector, elementsQ
     });
 
     window.addEventListener('resize', (e) => {
-        width = deleteNotDigits(window.getComputedStyle(slidesWrapper).width) / elementsQuantity + 'px';
+        width = deleteNotDigits(window.getComputedStyle(slidesWrapper).width) / elementsPerPage + 'px';
+        let slides = document.querySelectorAll(slide);
         slides.forEach((slide, index) => {
             slide.style.width = width;
             if (index != 0) {
@@ -96,7 +105,7 @@ function slider({container, wrapper, field, slide, indicatorsSelector, elementsQ
     
             changeActivity();
         },duration);
-      }
+    }
 
     function deleteNotDigits(str) {
         return +str.replace(/[^\d\.]/g, '');
@@ -111,7 +120,7 @@ slider({
     indicatorsSelector: 'gallery_slider_indicators',
     nextArrow: '.gallery_slider_next',
     prevArrow: '.gallery_slider_prev',
-    elementsQuantity: 4,
+    elementsPerPage: 4,
     duration: 5000,
-    rowGap: 10
+    rowGap: 15
 });
