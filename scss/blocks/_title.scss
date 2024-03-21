@@ -5,6 +5,9 @@
     &_24 {
         font-size: 24px;
     }
+    &_40{
+        font-size: 40px;
+    }
     &_55 {
         font-size: 55px;
     }
@@ -12,15 +15,18 @@
         font-size: 64px;
     }
 }
+.normal{
+    font-weight: 400;
+}
 .medium {
-	font-weight: 500;
+	  font-weight: 500;
 }
 .semi-bold {
-	font-weight: 600;
+	  font-weight: 600;
 }
-.arkhip {
-    font-family: 'Arkhip';
+.arkhip{
+    font-family: "Arkhip", serif;
 }
-.cofo {
-    font-family: 'CoFo Sans';
+.cofo{
+    font-family: "CoFo Sans", sans-serif;
 }
