@@ -1,0 +1,47 @@
+.gallery {
+    padding-top: 100px;
+    min-height: 628px;
+    &_slider {
+        margin-top: 30px;
+        position: relative;
+        width: 100%;
+        &_wrapper {
+            overflow: hidden;
+        }
+        &_inner {
+            display: flex;
+            transition: 0.5s all;
+        }
+        &_indicators {
+            position: absolute;
+            right: 0;
+            bottom: -51px;
+            left: 0;
+            z-index: 2;
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            list-style: none;
+            .dot {
+                width: 6%;
+                max-width: 116px;
+                height: 6px;
+                background: #d9d9d9;
+                cursor: pointer;
+            }
+            .active {
+                background: #000;
+            }
+        }
+    }
+    &_slide {
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .title_64 {
+        text-align: center;
+    }
+}

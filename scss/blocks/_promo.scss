@@ -1,5 +1,4 @@
 .promo {
-    width: 100vw; 
     height: 100vh; 
     overflow: hidden;
     &_wrapper {
@@ -61,8 +60,7 @@
     &_content {
         position: absolute;
         z-index: 2;
-        padding: 8.17% 0 0 9.16%;
-        width: 52%;
+        padding-top: 8.17%;
         &_contact {
             display: flex;
             align-items: center;
@@ -89,5 +87,8 @@
         .btn {
             margin-top: 27px;
         }
+    }
+    .title {
+        color: #fff;
     }
 }

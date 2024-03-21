@@ -1,7 +1,7 @@
 .title {
     font-size: 20px;
     font-weight: 400;
-    color: #fff;
+    color: #000;
     &_24 {
         font-size: 24px;
     }
@@ -11,40 +11,22 @@
     &_55 {
         font-size: 55px;
     }
-    &_64{
+    &_64 {
         font-size: 64px;
     }
-}
-.thin{
-    font-weight: 100;
-}
-.extraLight{
-    font-weight: 200;
-}
-.light{
-    font-weight: 300;
 }
 .normal{
     font-weight: 400;
 }
 .medium {
-	font-weight: 500;
+	  font-weight: 500;
 }
 .semi-bold {
-	font-weight: 600;
-}
-.bold{
-    font-weight: 700;
-}
-.extraBold{
-    font-weight: 700;
+	  font-weight: 600;
 }
 .arkhip{
     font-family: "Arkhip", serif;
 }
 .cofo{
     font-family: "CoFo Sans", sans-serif;
-}
-.montserrat{
-    font-family: "Montserrat", sans-serif;
 }
