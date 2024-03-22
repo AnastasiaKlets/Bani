@@ -79,7 +79,7 @@
 								участке, так и на отдыхе
 							</span>
 							</div>
-							<button class="btn btn_main">В каталог</button>
+							<button data-modal class="btn btn_main">В каталог</button>
 						</div>
 						<img src="img/possible_ordering/possible_ordering_ex1.png" alt="img_possible_ordering">
 					</div>
@@ -225,6 +225,31 @@
 			<span class="footer_text"><b>© 2024</b> Все права защищены</span>
 		</div>
 	</footer>
+	<div class="consult">
+		<div class="consult_modal">
+            <div class="title title_40 semi-bold">Оставить заявку</div>
+            <div class="title">Введите ваш номер телефона<br>и мы Вам перезвоним в течение <span class="medium">10 минут</span></div>
+			<div class="consult_close"><img data-close src="icons/close.svg" alt="close"></div>
+			<form class="consult_form" action="#">
+				<div class="consult_form_content">
+					<input type="text" name="phone" placeholder="+375 __ ___ __ __" class="consult_form_input" required> 
+					<button type="submit" class="btn btn_main">Отправить</button>
+				</div>
+				<div class="consult_form_bottom">
+					<label for="consult_form_checkbox" class="consult_form_label descr">
+						<input type="checkbox" name="checkbox" id="consult_form_checkbox" class="consult_form_checkbox" required checked>
+						<span class="consult_form_view">
+							<img class="consult_form_icon" src="icons/check.svg" alt="box">
+						</span>
+						Вы соглашаетесь с условиями<br>обработки персональных данных
+					</label>
+				</div>
+			</form>
+            <div class="consult_image">
+				<img src="img/consult_bg_1.png" alt="consult_bg">
+            </div>
+		</div>
+	</div>
   <script src="js/script.js"></script>
 </body>
 </html>
