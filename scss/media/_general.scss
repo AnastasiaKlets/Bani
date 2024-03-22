@@ -1,7 +1,11 @@
 @import 'title';
 @import 'button';
 @import 'promo';
+@import "possible_ordering";
 @import 'gallery';
+@import "footer";
+
+
 
 .hide {
 	display: none;
@@ -11,9 +15,6 @@
 }
 .flex {
 	display: flex;
-}
-.container{
-  overflow: hidden;
 }
 
 @media (max-width: 768px) {
