@@ -26,10 +26,9 @@
     &_ex1{
       flex-direction: column-reverse;
       gap: 40px;
-    }
-    &_ex2{
-      flex-direction: column-reverse;
-      gap: 40px;
+      img{
+        width: 100%;
+      }
     }
     &_img{
       width: 100%;
@@ -47,7 +46,7 @@
     &_all_examples{
       gap: 48px;
     }
-    &_ex1, &_ex2, &_all_text, &_text_btn{
+    &_ex1, &_all_text, &_text_btn{
       gap: 20px;
     }
   }
@@ -59,7 +58,7 @@
     &_all_examples{
       gap: 38px;
     }
-    &_ex1, &_ex2, &_all_text, &_text_btn{
+    &_ex1, &_all_text, &_text_btn{
       gap: 10px;
     }
   }

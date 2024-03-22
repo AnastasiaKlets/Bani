@@ -1,66 +1,32 @@
-@media (max-width:1440px) {
-  .possible_ordering{
-    gap: 50px;
-    margin-top: 80px;
-    &_all_examples{
-      gap: 130px;
-    }
-  }
-}
-@media (max-width: 1200px) {
-  .possible_ordering{
-    gap: 40px;
-    margin-top: 70px;
-    &_all_examples{
-      gap: 100px;
-    }
-  }
-}
-@media (max-width: 992px) {
-  .possible_ordering{
-    gap: 40px;
-    margin-top: 55px;
-    &_all_examples{
-      gap: 40px;
-    }
-    &_ex1{
-      flex-direction: column-reverse;
-      gap: 40px;
-    }
-    &_ex2{
-      flex-direction: column-reverse;
-      gap: 40px;
-    }
-    &_img{
-      width: 100%;
-    }
-  }
-  .btn_main{
+.possible_ordering{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 70px;
+  margin-top: 100px;
+  &_all_examples{
+    display: flex;
+    flex-direction: column;
+    gap:130px;
     width: 100%;
   }
-}
+  &_ex1{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 100px;
+    img{
+      width: 50%;
+    }
+  }
+  &_ex2{
+    flex-direction: row-reverse;
+  }
+  &_text_btn{
+    display: flex;
+    flex-direction: column;
+   gap: 30px;
+  }
 
-@media (max-width: 768px) {
-  .possible_ordering{
-    gap: 30px;
-    margin-top: 40px;
-    &_all_examples{
-      gap: 48px;
-    }
-    &_ex1, &_ex2, &_all_text, &_text_btn{
-      gap: 20px;
-    }
-  }
-}
-@media (max-width: 480px) {
-  .possible_ordering{
-    gap: 20px;
-    margin-top: 30px;
-    &_all_examples{
-      gap: 38px;
-    }
-    &_ex1, &_ex2, &_all_text, &_text_btn{
-      gap: 10px;
-    }
-  }
 }
