@@ -1,0 +1,40 @@
+.whatUse{
+  background: url("../../img/what_use/whatUseBacgraund.png") no-repeat center;
+  background-size: cover;
+  width: 100%;
+  margin-top: 100px;
+
+  &_content{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 70px 0 80px;
+  }
+
+  &_textAndList{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    ul{
+      list-style-image: url(../../icons/check_mark.svg);
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      position: relative;
+      left: 40px;
+
+    }
+  }
+
+  &_title{
+    color: #ffffff;
+  }
+  &_text{
+    color: #ffb800;
+  }
+
+  &_title, &_textAndList{
+    width: 60%;
+  }
+}

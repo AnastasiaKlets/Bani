@@ -1,0 +1,108 @@
+@media (max-width:1720px) {
+
+}
+@media (max-width:1600px) {
+
+}
+@media (max-width:1440px) {
+  .whatUse{
+    &_content{
+      gap: 35px;
+    }
+    &_textAndList{
+      gap: 25px;
+      ul{
+        gap: 20px;
+      }
+    }
+  }
+}
+@media (max-width: 1235px) {
+  .whatUse{
+    &_content{
+      gap: 30px;
+    }
+    &_textAndList{
+      gap: 20px;
+      ul{
+        gap: 15px;
+      }
+    }
+    &_title, &_textAndList{
+      width: 70%;
+    }
+  }
+}
+@media (max-width: 992px) {
+  .whatUse{
+    background: url("../../img/what_use/whatUseBacgraundPlanshet.png") no-repeat center;
+    background-size: cover;
+    width: 100%;
+    margin-top: 80px;
+
+    &_content{
+      gap: 30px;
+      padding: 60px 0 160px;
+      align-items: center;
+    }
+
+    &_textAndList{
+      gap: 25px;
+      ul{
+        list-style-image: url(../../icons/check_mark_mob.svg);
+        gap: 35px;
+        left: 22px;
+      }
+    }
+    &_title, &_textAndList{
+      width: 85%;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .whatUse{
+    margin-top: 60px;
+    &_content{
+      gap: 20px;
+      padding: 48px 0 160px;
+    }
+    &_textAndList{
+      gap: 20px;
+      ul{
+        gap: 25px;
+        left: 22px;
+      }
+    }
+    &_title, &_textAndList{
+      width: 95%;
+    }
+  }
+}
+@media (max-width: 480px) {
+  .whatUse{
+    background: url("../../img/what_use/whatUseBacgraundMob.png") no-repeat center;
+    background-size: cover;
+    margin-top: 60px;
+    &_content{
+      gap: 15px;
+      padding: 25px 0 160px;
+    }
+    &_textAndList{
+      gap: 20px;
+      ul{
+        gap: 15px;
+        left: 22px;
+        width: 90%;
+        li{
+          font-size: 12px;
+        }
+      }
+    }
+    &_text{
+      font-size: 16px;
+    }
+    &_title, &_textAndList{
+      width: 100%;
+    }
+  }
+}

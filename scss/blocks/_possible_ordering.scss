@@ -8,27 +8,25 @@
   &_all_examples{
     display: flex;
     flex-direction: column;
-    gap: 130px;
+    gap:130px;
+    width: 100%;
   }
   &_ex1{
     display: flex;
-    align-items: center;
     width: 100%;
+    align-items: center;
     gap: 100px;
+    img{
+      width: 50%;
+    }
   }
   &_ex2{
-    display: flex;
-    align-items: center;
     flex-direction: row-reverse;
-    width: 100%;
-    gap: 100px;
   }
   &_text_btn{
     display: flex;
     flex-direction: column;
-    gap: 38px;
+   gap: 30px;
   }
-  &_all_text{
-    gap: 25px;
-  }
+
 }
