@@ -1,0 +1,26 @@
+.aboutCompany{
+  margin-top: 100px;
+  &_wrapper{
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    width: 100%;
+  }
+  &_textButton{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 60%;
+    gap: 40px;
+  }
+  &_text{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  &_img{
+    img{
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.map{
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 65px;
+ &_img{
+   background: url("../../img/map/mapBackgraund.png") no-repeat center;
+   background-size: cover;
+   width: 100%;
+ }
+  &_map{
+    padding: 60px 0;
+    iframe{
+      width: 60%;
+      border-radius: 20px;
+    }
+  }
+}

@@ -1,0 +1,94 @@
+
+@media (max-width:1720px) {
+  .aboutCompany{
+    &_textButton{
+      width: 63%;
+      gap: 40px;
+    }
+  }
+}
+@media (max-width:1600px) {
+  .aboutCompany{
+    &_textButton{
+      width: 65%;
+    }
+  }
+}
+@media (max-width:1440px) {
+  .aboutCompany{
+    &_wrapper{
+      gap: 55px;
+    }
+    &_textButton{
+      width: 75%;
+      gap: 30px;
+    }
+    &_text{
+      gap: 10px;
+    }
+
+  }
+}
+@media (max-width: 1200px) {
+  .aboutCompany{
+    &_wrapper{
+      gap: 50px;
+      width: 100%;
+    }
+    &_textButton{
+      width: 78%;
+      gap: 25px;
+    }
+    &_text{
+      gap: 10px;
+    }
+  }
+}
+@media (max-width: 992px) {
+  .aboutCompany{
+    margin-top: 60px;
+    &_wrapper{
+      gap: 20px;
+    }
+    &_textButton{
+      width: 80%;
+      gap: 20px;
+    }
+    &_text{
+      gap: 10px;
+    }
+
+  }
+}
+@media (max-width: 768px) {
+  .aboutCompany{
+    &_wrapper{
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
+      width: 100%;
+    }
+    &_title{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &_textButton{
+      width: 100%;
+      gap: 20px;
+    }
+    &_text{
+      gap: 10px;
+    }
+  }
+}
+@media (max-width: 480px) {
+  .aboutCompany{
+    &_wrapper{
+      gap: 20px;
+    }
+    &_text{
+      gap: 8px;
+    }
+  }
+}
