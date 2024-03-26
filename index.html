@@ -5,18 +5,64 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Бани</title>
 	<link rel="icon" type="image/png" href="icons/favicon.png" />
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="scss/style.css">
 </head>
 <body>
 	<header class="header">
-		<div class="container">
-			<img src="" alt="">
+		<div class="container header_wrapper">
+			<img src="icons/logoBani.svg" alt="logo">
 			<div class="header_btn">
-
+				<button class="title">
+					Каталог
+				</button>
+				<button class="title">
+					О нас
+				</button>
+				<button class="title">
+					Оплата и доставка
+				</button>
+				<button class="title">
+					Наши работы
+				</button>
+				<button class="title">
+					Контакты
+				</button>
+				<button class="title">
+					Прайс-лист
+				</button>
 			</div>
 			<div class="header_social">
-
+				<div class="header_social_tg">
+					<span>
+						Telegram
+					</span>
+					<img src="icons/Telegram.svg" alt="Telegram">
+				</div>
+				<div class="header_social_wa">
+					<span>
+						WhatsApp
+					</span>
+					<img src="icons/WhatsApp.svg" alt="WhatsApp">
+				</div>
 			</div>
+		</div>
+		<div class="menu container">
+			<img src="icons/logoBaniMob.svg" alt="logo">
+			<div class="menu_contacts">
+				<img src="icons/phone.svg" alt="tel">
+				<img src="icons/TelegramMob.svg" alt="tg">
+				<img src="icons/WhatsAppMob.svg" alt="wa">
+			</div>
+			<input type="checkbox" id="burger-checkbox" class="burger-checkbox">
+			<label for="burger-checkbox" class="burger"></label>
+			<ul class="menu-list">
+				<li><a href="#" class="title menu-item menu-item_catalog">Каталог</a><li>
+				<li><a href="#" class="title menu-item">О нас</a><li>
+				<li><a href="#" class="title menu-item">Оплата и доставка</a><li>
+				<li><a href="#" class="title menu-item">Наши работы</a><li>
+				<li><a href="#" class="title menu-item">Контакты</a><li>
+				<li><a href="#" class="title menu-item">Прайс-лист</a><li>
+			</ul>
 		</div>
 	</header>
 	<section class="promo">
@@ -315,6 +361,6 @@
 			<span class="footer_text"><b>© 2024</b> Все права защищены</span>
 		</div>
 	</footer>
-  <script src="js/script.js"></script>
+  	<script src="js/script.js"></script>
 </body>
 </html>
