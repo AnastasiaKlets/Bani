@@ -182,35 +182,32 @@
 					При строительстве бани используется натуральная и безвредная древесина
 				</div>
 				<div class="whatUse_textAndList">
-					<div class="whatUse_text title normal arkhip title_40">
+					<div class="whatUse_text title arkhip title_40">
 						Хвойные деревья - ель и кедр
 					</div>
 					<ul class="whatUse_List ">
-						<li class="normal arkhip title_24">
+						<li class="title title_24 arkhip">
 							Не подвержена гниению и появлению трещин.
 							<br>
 							Высокий уровень звукоизоляции.
 						</li>
-						<li class="normal arkhip title_24">
+						<li class="title title_24 arkhip">
 							Смолистая древесина обладает природной
 							<br>
 							стойкостью к развитию грибков.
 						</li>
-						<li class="normal arkhip title_24">
+						<li class="title title_24 arkhip">
 							Древесина в процессе сушки становится
 							<br>
 							более прочной и гибкой.
 						</li>
-						<li class="normal arkhip title_24">
+						<li class="title title_24 arkhip">
 							Мягкая, легкодоступная древесина, легкая в обработке.
 							<br>
 							Используется для изготовления бань-бочек.
 						</li>
 					</ul>
-
 				</div>
-
-
 			</div>
 		</div>
 	</section>
@@ -273,8 +270,9 @@
 				<div class="title title_24 arkhip">Получите за 2 минуты расчет стоимости бани бочки<br>по вашим параметрам с учетом доставки до вашего участка</div>
 				<form class="costing_form" action="#">
 					<div class="costing_form_content">
-						<input type="text" name="phone" placeholder="+375 __ ___ __ __" class="costing_form_input" required> 
-						<button type="submit" class="btn btn_test btn_test_result">Gauti apskaičiavimą + nuolaida -15%</button>
+						<input type="text" name="name" placeholder="Имя" class="costing_form_input" required> 
+						<input type="text" name="phone" placeholder="Телефон" class="costing_form_input" required> 
+						<button data-modal type="submit" class="btn btn_main">Получить расчёт</button>
 					</div>
 					<div class="costing_form_bottom">
 						<label for="costing_form_checkbox" class="costing_form_label descr">
@@ -286,8 +284,11 @@
 						</label>
 					</div>
 				</form>
+			  <div class="costing_image">
+					<img src="img/bucket.png" alt="">
+				</div>
 			</div>
-        </div>
+		</div>
 	</section>
 	<section class="map">
 		<div class="container title title_24 arkhip">
@@ -300,8 +301,6 @@
 				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.649838799607!2d-74.09158997611155!3d4.830046691502837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f87f87e39366f%3A0x797bbef3815ac683!2sLa%20Vuelta%20del%20Rio%202!5e0!3m2!1sru!2sby!4v1711355947166!5m2!1sru!2sby" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 			</div>
 		</div>
-
-
 	</section>
 	<footer>
 		<div class="container footer">
@@ -361,6 +360,34 @@
 			<span class="footer_text"><b>© 2024</b> Все права защищены</span>
 		</div>
 	</footer>
-  	<script src="js/script.js"></script>
+	<div class="consult">
+		<div class="consult_modal">
+			<div class="consult_gradient"></div>
+			<div class="consult_close"><img data-close src="icons/close.svg" alt="close"></div>
+            <div class="consult_content">
+				<div class="title title_40 semi-bold">Оставить заявку</div>
+				<div class="title">Введите ваш номер телефона<br>и мы Вам перезвоним в течение <span class="medium">10 минут</span></div>
+				<form class="consult_form" action="#">
+					<div class="consult_form_content">
+						<input type="text" name="phone" placeholder="+375 __ ___ __ __" class="consult_form_input" required> 
+						<button type="submit" class="btn btn_main">Отправить</button>
+					</div>
+					<div class="consult_form_bottom">
+						<label for="consult_form_checkbox" class="consult_form_label descr">
+							<input type="checkbox" name="checkbox" id="consult_form_checkbox" class="consult_form_checkbox" required checked>
+							<span class="consult_form_view">
+								<img class="consult_form_icon" src="icons/check.svg" alt="box">
+							</span>
+							Вы соглашаетесь с условиями<br>обработки персональных данных
+						</label>
+					</div>
+				</form>
+			</div>
+      <div class="consult_image">
+        <img src="img/consult_bg_1.png" alt="consult_bg">
+      </div>
+		</div>
+	</div>
+  <script src="js/script.js"></script>
 </body>
 </html>

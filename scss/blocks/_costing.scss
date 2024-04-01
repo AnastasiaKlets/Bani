@@ -1,0 +1,78 @@
+.costing {
+    margin-top: 271px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25);
+    &_content {
+        position: relative;
+        padding: 36px 0 34px 0;
+    }
+    &_image {
+        position: absolute;
+        top:50%;
+        left:109%;
+        transform:translate(-109%, -50%);
+        width: 34.69%;
+        img {
+            width: 100%;
+        }
+    }
+    &_form {
+        margin-top: 25px;
+        display: flex;
+        flex-direction: column;
+        gap: 41px;
+        &_content {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+        &_input {
+            width: 19%;
+            height: 27px;
+            padding: 10px 13px;
+            background: rgba(217, 217, 217, 0.83);
+            font-weight: 400;
+            font-size: 20px;
+            color: rgba(0, 0, 0, 0.63);
+            border: none;
+            outline: none;
+            &::placeholder {
+                font-weight: 400;
+                font-size: 20px;
+                color: rgba(0, 0, 0, 0.63);
+            }
+        }
+        &_checkbox {
+            position: absolute;
+            z-index: -1;
+        }
+        &_label {
+            display: flex;
+            gap: 10px;
+            cursor: pointer;
+        }
+        &_view {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 16px;
+            height: 16px;
+            border: 1px solid #ccc;
+            background: #fff;
+            transition: .3s;
+        }
+        &_icon {
+            opacity: 0;
+            transition: .3s;
+        }
+        &_checkbox:checked + &_view {
+            background-color: #008a34;
+            border: none;
+        }
+        &_checkbox:checked + &_view &_icon {
+            opacity: 1;
+        }
+    }
+    .btn_main {
+        width: 19%;
+    }
+}

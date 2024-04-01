@@ -147,6 +147,40 @@ function slider({container, wrapper, field, slide, indicatorsSelector, elementsP
     }
 }
 
+function openModal(modalSelector) {
+    const modal = document.querySelector(modalSelector);
+    modal.classList.add('show');
+    modal.classList.remove('hide');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeModal(modalSelector) {
+    const modal = document.querySelector(modalSelector);
+    modal.classList.add('hide');
+    modal.classList.remove('show');
+    document.body.style.overflow = '';
+}
+
+function modal(triggerSelector, closeSelector, modalSelector) {
+    const modalTrigger = document.querySelectorAll(triggerSelector),
+        modal = document.querySelector(modalSelector);
+    modalTrigger.forEach(btn => {
+        btn.addEventListener('click', () => openModal(modalSelector));
+    });
+
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal || e.target.getAttribute(closeSelector) == '') {
+            closeModal(modalSelector);
+        }
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.code === "Escape" && modal.classList.contains('show')) { 
+            closeModal(modalSelector);
+        }
+    });
+}
+
 slider({
     container: '.gallery_slider',
     wrapper: '.gallery_slider_wrapper',
@@ -161,6 +195,4 @@ slider({
     rowGap: 15
 });
 
-
-
-
+modal('[data-modal]', 'data-close', '.consult');
