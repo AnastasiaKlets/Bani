@@ -8,6 +8,63 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+	<header class="header">
+		<div class="container header_wrapper">
+			<img src="icons/logoBani.svg" alt="logo">
+			<div class="header_btn">
+				<button class="title">
+					Каталог
+				</button>
+				<button class="title">
+					О нас
+				</button>
+				<button class="title">
+					Оплата и доставка
+				</button>
+				<button class="title">
+					Наши работы
+				</button>
+				<button class="title">
+					Контакты
+				</button>
+				<button class="title">
+					Прайс-лист
+				</button>
+			</div>
+			<div class="header_social">
+				<div class="header_social_tg">
+					<span>
+						Telegram
+					</span>
+					<img src="icons/Telegram.svg" alt="Telegram">
+				</div>
+				<div class="header_social_wa">
+					<span>
+						WhatsApp
+					</span>
+					<img src="icons/WhatsApp.svg" alt="WhatsApp">
+				</div>
+			</div>
+		</div>
+		<div class="menu container">
+			<img src="icons/logoBaniMob.svg" alt="logo">
+			<div class="menu_contacts">
+				<img src="icons/phone.svg" alt="tel">
+				<img src="icons/TelegramMob.svg" alt="tg">
+				<img src="icons/WhatsAppMob.svg" alt="wa">
+			</div>
+			<input type="checkbox" id="burger-checkbox" class="burger-checkbox">
+			<label for="burger-checkbox" class="burger"></label>
+			<ul class="menu-list">
+				<li><a href="#" class="title menu-item menu-item_catalog">Каталог</a><li>
+				<li><a href="#" class="title menu-item">О нас</a><li>
+				<li><a href="#" class="title menu-item">Оплата и доставка</a><li>
+				<li><a href="#" class="title menu-item">Наши работы</a><li>
+				<li><a href="#" class="title menu-item">Контакты</a><li>
+				<li><a href="#" class="title menu-item">Прайс-лист</a><li>
+			</ul>
+		</div>
+	</header>
 	<section class="promo">
 		<div class="promo_wrapper">
 			<div class="promo_top">
@@ -125,35 +182,61 @@
 					При строительстве бани используется натуральная и безвредная древесина
 				</div>
 				<div class="whatUse_textAndList">
-					<div class="whatUse_text title normal arkhip title_40">
+					<div class="whatUse_text title arkhip title_40">
 						Хвойные деревья - ель и кедр
 					</div>
 					<ul class="whatUse_List ">
-						<li class="normal arkhip title_24">
+						<li class="title title_24 arkhip">
 							Не подвержена гниению и появлению трещин.
 							<br>
 							Высокий уровень звукоизоляции.
 						</li>
-						<li class="normal arkhip title_24">
+						<li class="title title_24 arkhip">
 							Смолистая древесина обладает природной
 							<br>
 							стойкостью к развитию грибков.
 						</li>
-						<li class="normal arkhip title_24">
+						<li class="title title_24 arkhip">
 							Древесина в процессе сушки становится
 							<br>
 							более прочной и гибкой.
 						</li>
-						<li class="normal arkhip title_24">
+						<li class="title title_24 arkhip">
 							Мягкая, легкодоступная древесина, легкая в обработке.
 							<br>
 							Используется для изготовления бань-бочек.
 						</li>
 					</ul>
-
 				</div>
-
-
+			</div>
+		</div>
+	</section>
+	<section class="aboutCompany">
+		<div class="container">
+			<div class="aboutCompany_wrapper">
+				<div class="aboutCompany_textButton">
+					<div class="aboutCompany_title title title_64 arkhip">О компании</div>
+					<div class="aboutCompany_text title_24 title">
+						<span>
+							Мы предлагаем высококачественные и надежные изделия, которые будут радовать вас многие годы.
+							Наша компания использует только экологически чистые материалы при производстве бань-бочек.
+							Все детали изготавливаются из древесины сибирской лиственницы, которая отличается высокой прочностью
+							и долговечностью. У нас широкий выбор моделей бань-бочек, которые отличаются по размерам, дизайну
+							и функциональности. Вы можете выбрать баню-бочку, которая подходит именно вам и удовлетворит все
+							ваши потребности.
+						</span>
+						<span>
+							Мы также предоставляем услуги по установке бань-бочек и обеспечивает гарантию на все свои изделия.
+							Вы можете быть уверены, что ваша баня-бочка будет работать исправно и безопасно. Кроме того, “Название”
+							предлагает конкурентные цены на свои изделия, что делает их доступными для широкой аудитории.
+							Вы получите отличное качество по разумной цене.
+						</span>
+					</div>
+					<button class="btn btn_main">Оставить заявку</button>
+				</div>
+				<div class="aboutCompany_img">
+					<img src="img/about_company/aboutCompany.png" alt="aboutCompany_example">
+				</div>
 			</div>
 		</div>
 	</section>
@@ -197,13 +280,25 @@
 							<span class="costing_form_view">
 								<img class="costing_form_icon" src="icons/check.svg" alt="box">
 							</span>
-							Вы соглашаетесь с условиями <br class="br"> обработки персональных данных
+							Вы соглашаетесь с условиями обработки персональных данных
 						</label>
 					</div>
 				</form>
-				<div class="costing_image">
+			  <div class="costing_image">
 					<img src="img/bucket.png" alt="">
 				</div>
+			</div>
+		</div>
+	</section>
+	<section class="map">
+		<div class="container title title_24 arkhip">
+			На выставочной площадке можно посмотреть разные модели бань и понять, какая подойдет именно вам!
+			<br>
+			Ждем вас по адресу: Colombia, Cundinamarca, Cota, km 2 via Cota-Chia, Vuelto del Rio-2
+		</div>
+		<div class="map_img">
+			<div class="container map_map">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.649838799607!2d-74.09158997611155!3d4.830046691502837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f87f87e39366f%3A0x797bbef3815ac683!2sLa%20Vuelta%20del%20Rio%202!5e0!3m2!1sru!2sby!4v1711355947166!5m2!1sru!2sby" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 			</div>
 		</div>
 	</section>
@@ -288,9 +383,9 @@
 					</div>
 				</form>
 			</div>
-            <div class="consult_image">
-				<img src="img/consult_bg_1.png" alt="consult_bg">
-            </div>
+      <div class="consult_image">
+        <img src="img/consult_bg_1.png" alt="consult_bg">
+      </div>
 		</div>
 	</div>
   <script src="js/script.js"></script>

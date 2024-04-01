@@ -19,11 +19,19 @@
 
 @import 'blocks/title';
 @import 'blocks/button';
-@import 'blocks/consult';
+@import "blocks/header";
+@import "blocks/headerAllPages";
 @import 'blocks/promo';
 @import "blocks/possible_ordering";
 @import "blocks/whatUse";
+@import "blocks/aboutCompany";
 @import 'blocks/gallery';
 @import 'blocks/costing';
+@import "blocks/map";
+@import 'blocks/consult';
 @import "blocks/footer";
+@import "blocks/ourWorks";
+
 @import 'media/general';
+
+
