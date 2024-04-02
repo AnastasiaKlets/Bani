@@ -1,11 +1,16 @@
 @import 'title';
 @import 'button';
+@import "header";
+@import "headerAllPages";
 @import 'promo';
 @import "possible_ordering";
 @import "whatUse";
+@import "aboutCompany";
 @import 'gallery';
+@import "map";
 @import 'costing';
 @import "footer";
+@import "ourWorks";
 
 .hide {
 	display: none;

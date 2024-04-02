@@ -1,0 +1,40 @@
+.headerAllPages{
+  width: 100%;
+  height: 95px;
+  background: black;
+  display: flex;
+  align-items: center;
+  &_wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    nav{
+      ul{
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;
+        a{
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  &_menu-item{
+    color: #ffffff;
+  }
+  &_telAndSoc{
+    display: flex;
+    gap: 30px;
+  }
+  &_tel{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    img{
+      width: 21px;
+    }
+    span{
+      color: #ffffff;
+    }
+  }
+}

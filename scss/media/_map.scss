@@ -1,0 +1,57 @@
+@media (max-width:1720px) {
+
+}
+@media (max-width:1600px) {
+
+}
+@media (max-width:1440px) {
+
+}
+@media (max-width: 1200px) {
+
+}
+@media (max-width: 992px) {
+  .map{
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    &_map{
+      padding: 38px 0 380px;
+      iframe{
+        width: 100%;
+        border-radius: 20px;
+        height: 385px;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .map{
+    gap: 25px;
+    &_img{
+      background: url("../../img/map/mapBackgraundMob.png") no-repeat center;
+      background-size: cover;
+    }
+    &_map{
+      padding: 35px 0 310px;
+      iframe{
+        width: 100%;
+        border-radius: 20px;
+        height: 355px;
+      }
+    }
+  }
+}
+@media (max-width: 480px) {
+  .map{
+    gap: 20px;
+    &_map{
+      padding: 28px 0 300px;
+      iframe{
+        border-radius: 20px;
+        height: 315px;
+      }
+    }
+  }
+}

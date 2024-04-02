@@ -1,0 +1,217 @@
+@media (max-width:1720px) {
+
+}
+@media (max-width:1600px) {
+  .headerAllPages{
+    height: 90px;
+    &_wrapper{
+      nav{
+        ul{
+          gap: 10px;
+
+        }
+      }
+    }
+    &_telAndSoc{
+      gap: 25px;
+    }
+    &_tel{
+      img{
+        width: 16px;
+      }
+
+    }
+  }
+}
+@media (max-width:1440px) {
+  .headerAllPages{
+    height: 90px;
+    &_wrapper{
+      &_logo{
+        width: 60px;
+      }
+      nav{
+        ul{
+          gap: 4px;
+
+        }
+      }
+    }
+    &_telAndSoc{
+      gap: 20px;
+    }
+    &_tel{
+      img{
+        width: 14px;
+      }
+
+    }
+    &_social{
+      img{
+        width: 30px;
+      }
+    }
+  }
+}
+@media (max-width: 1200px) {
+  .headerAllPages{
+    height: 80px;
+    &_wrapper{
+      &_logo{
+        width: 35px;
+      }
+      nav{
+        ul{
+          gap: 2px;
+
+        }
+      }
+    }
+    &_telAndSoc{
+      gap: 5px;
+    }
+    &_tel{
+      img{
+        width: 12px;
+      }
+
+    }
+    &_social{
+      display: flex;
+      align-items: center;
+      gap: 1px;
+      img{
+        width: 20px;
+      }
+    }
+  }
+}
+@media (max-width: 1019px) {
+  .headerAllPages_desktop{
+    display: none;
+  }
+  .menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    img{
+      width: auto;
+    }
+    &_contacts{
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      img{
+        height: 45px;
+      }
+    }
+  }
+  .header_wrapper{
+    display: none;
+  }
+  .burger-checkbox {
+    position: absolute;
+    visibility: hidden;
+  }
+  .burger {
+    position: relative;
+    z-index: 4;
+    cursor: pointer;
+    display: block;
+    border: none;
+    background: transparent;
+    width: 40px;
+    height: 26px;
+  }
+
+  .burger::before,
+  .burger::after {
+    content: '';
+    left: 0;
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 10px;
+    background: #ffffff;
+  }
+  .burger::before {
+    top: 0;
+    box-shadow: 0 11px 0 #ffffff;
+    transition: box-shadow .4s .15s, top .4s .15s, transform .4s;
+  }
+  .burger::after {
+    bottom: 0;
+    transition: bottom .3s .15s, transform .3s;
+  }
+  .burger-checkbox:checked + .burger::before {
+    top: 11px;
+    transform: rotate(45deg);
+    box-shadow: 0 6px 0 rgba(0,0,0,0);
+    transition: box-shadow .15s, top .4s, transform .4s .15s;
+    background: #000000;
+  }
+  .burger-checkbox:checked + .burger::after {
+    bottom: 11px;
+    transform: rotate(-45deg);
+    transition: bottom .4s, transform .4s .15s;
+    background: #000000;
+  }
+  .menu-list {
+    top: 0;
+    left: 0;
+    position: absolute;
+    display: grid;
+    padding: 42px 23px 32px;
+    margin: 0;
+    background: #ffffff;
+    list-style-type: none;
+    transform: translateX(-100%);
+    transition: .3s;
+    width: 100%;
+    z-index: 3;
+    justify-items: start;
+  }
+  .menu-item {
+    display: block;
+    padding: 8px;
+    font-size: 22px;
+    text-align: center;
+    text-decoration: none;
+    &_catalog{
+      color: #008A34;
+    }
+  }
+  .menu-item:hover {
+    background: #ffffff;
+  }
+  .burger-checkbox:checked ~ .menu-list {
+    transform: translateX(0);
+  }
+}
+@media (max-width: 768px) {
+  .menu{
+    &_contacts{
+      gap: 15px;
+      img{
+        height: 40px;
+      }
+    }
+  }
+  .menu-item {
+    font-size: 21px;
+  }
+}
+@media (max-width: 480px) {
+  .menu{
+    &_contacts{
+      gap: 10px;
+      img{
+        height: 35px;
+      }
+    }
+  }
+  .menu-item {
+    font-size: 20px;
+  }
+}
