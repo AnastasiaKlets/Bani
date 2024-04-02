@@ -2,7 +2,10 @@
   display: none;
 }
 .header{
+  position: fixed;
+  z-index: 4;
   padding: 10px;
+  width: 100%;
    &_wrapper{
      display: flex;
      justify-content: space-between;
@@ -27,9 +30,9 @@
         font-weight: 500;
         font-size: 16px;
       }
-      Position: absolute;
+      position: absolute;
       z-index: 2;
-      Top: -91px;
+      top: -91px;
       transition: all 1s;
       width: 56px;
       height: 147px;
