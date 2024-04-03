@@ -113,6 +113,38 @@ function slider({container, wrapper, field, slide, indicatorsSelector, elementsP
 
     makeTimer(duration);
 
+    function moveNext() {
+        if (offset == deleteNotDigits(width) * (slides.length - 1)) {
+			offset = 0;
+		} else {
+			offset += deleteNotDigits(width);
+		}
+
+		if (slideIndex == slides.length) {
+			slideIndex = 1;
+		} else {
+			slideIndex++;
+		}
+
+        changeActivity();
+    }
+
+    function movePrev() {
+        if (offset == 0) {
+			offset = deleteNotDigits(width) * (slides.length - 1);
+		} else {
+			offset -= deleteNotDigits(width);
+		}
+
+		if (slideIndex == 1) {
+			slideIndex = slides.length;
+		} else {
+			slideIndex--;
+		}
+
+        changeActivity();
+    }
+
     function changeActivity() {
         slidesField.style.transform = `translateX(-${offset}px)`;
         dots.forEach(dot => dot.classList.remove('active'));
@@ -124,26 +156,45 @@ function slider({container, wrapper, field, slide, indicatorsSelector, elementsP
             return;
         }
         clearInterval(timer)
-        timer = setInterval(function(){
-            if (offset == deleteNotDigits(width) * (slides.length - 1)) {
-                offset = 0;
-            } else {
-                offset += deleteNotDigits(width);
-            }
-    
-            if (slideIndex == slides.length) {
-                slideIndex = 1;
-            } else {
-                slideIndex++;
-            }
-    
-            changeActivity();
-        },duration);
+        timer = setInterval(() => moveNext(), duration);
     }
 
     function deleteNotDigits(str) {
         return +str.replace(/[^\d\.]/g, '');
     }
+
+    let startX;
+    let endX;
+
+    const start = (e) => {
+        startX = e.pageX || e.touches[0].pageX;	
+    }
+
+    const end = () => {
+        if (endX < startX) {
+            moveNext();
+            makeTimer(duration);
+        }  
+        if (endX > startX) {
+            movePrev();
+            makeTimer(duration);
+        }
+    }
+
+    const move = (e) => {
+        e.preventDefault();
+        endX = e.pageX || e.touches[0].pageX;
+    }
+
+    slidesField.addEventListener('mousedown', start);
+    slidesField.addEventListener('touchstart', start);
+
+    slidesField.addEventListener('mousemove', move);
+    slidesField.addEventListener('touchmove', move);
+
+    slidesField.addEventListener('mouseleave', end);
+    slidesField.addEventListener('mouseup', end);
+    slidesField.addEventListener('touchend', end);
 }
 
 function openModal(modalSelector) {
@@ -179,6 +230,19 @@ function modal(triggerSelector, closeSelector, modalSelector) {
         }
     });
 }
+
+
+    $("form").on( "submit", function( event ) {
+        event.preventDefault();
+        let name = event.target.classList.value.slice(0, -5);
+        $(`.${name}_form`).trigger('reset');
+        closeModal(`.${name}`)
+        openModal('.thanks');
+        setTimeout(function(){
+            closeModal('.thanks');
+            location="#promo";
+        }, 15000)
+    });
 
 slider({
     container: '.gallery_slider',

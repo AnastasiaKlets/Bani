@@ -1,5 +1,23 @@
 @media (max-width:1720px) {
-
+    .promo {
+        &_content {
+            padding-top: 105px;
+            .title_55 {
+                margin-top: 26px;
+            }
+            .medium {
+                margin-top: 20px;
+            }
+            .btn {
+                margin-top: 22px;
+            }
+        }
+        &_item {
+            &_content {
+                padding: 0 0 39px 26px;
+            }
+        }
+    }
 }
 @media (max-width:1600px) {
 
@@ -22,12 +40,24 @@
         &_gradient.top {
             display: none;
         }
+        &_mobile {
+            display: block;
+            position: absolute;
+            z-index: 1;
+            width: 100%;
+            height: 68%;
+            background-image: linear-gradient(to bottom, rgba(0,0,0,1) 79%, transparent);
+        }
         &_top {
             height: 52%;
             background: #000;
             &_image {
                 bottom: 0;
-                width: 82%;
+                width: 92%;
+                height: 39%;
+                img {
+                    height: 100%;
+                }
             }
         }
         &_bottom {
@@ -36,9 +66,6 @@
         }
         &_item {
             width: 100%;
-            &_content {
-                padding: 0 0 11.3% 7.22%;
-            }
         }
         &_image.top {
             bottom: 0;
@@ -46,8 +73,8 @@
             height: 55.85%;
         }
         &_content {
-            padding-top: 18.24%;
-            width: calc(100% - 7.22% - 5%);
+            padding-top: 76px;
+            width: 87%;
             &_contact {
                 display: none;
             }
@@ -57,9 +84,6 @@
             .medium {
                 margin-top: 12px;
                 max-width: 100%;
-            }
-            .btn {
-                margin-top: 22px;
             }
         }
     }
