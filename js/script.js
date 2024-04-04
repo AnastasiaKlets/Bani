@@ -232,30 +232,34 @@ function modal(triggerSelector, closeSelector, modalSelector) {
 }
 
 
-    $("form").on( "submit", function( event ) {
-        event.preventDefault();
-        let name = event.target.classList.value.slice(0, -5);
-        $(`.${name}_form`).trigger('reset');
-        closeModal(`.${name}`)
-        openModal('.thanks');
-        setTimeout(function(){
-            closeModal('.thanks');
-            location="#promo";
-        }, 15000)
-    });
-
-slider({
-    container: '.gallery_slider',
-    wrapper: '.gallery_slider_wrapper',
-    field: '.gallery_slider_inner',
-    slide: '.gallery_slide',
-    indicatorsSelector: 'gallery_slider_indicators',
-    nextArrow: '.gallery_slider_next',
-    prevArrow: '.gallery_slider_prev',
-    elementsPerPage: 4,
-    elementsPerPageMobile: 1.45,
-    duration: 5000,
-    rowGap: 15
+$("form").on( "submit", function( event ) {
+    event.preventDefault();
+    let name = event.target.classList.value.slice(0, -5);
+    $(`.${name}_form`).trigger('reset');
+    closeModal(`.${name}`)
+    openModal('.thanks');
+    setTimeout(function(){
+        closeModal('.thanks');
+        location="#promo";
+    }, 15000)
 });
 
-modal('[data-modal]', 'data-close', '.consult');
+if (document.querySelector('.gallery_slider') != null) {
+    slider({
+        container: '.gallery_slider',
+        wrapper: '.gallery_slider_wrapper',
+        field: '.gallery_slider_inner',
+        slide: '.gallery_slide',
+        indicatorsSelector: 'gallery_slider_indicators',
+        nextArrow: '.gallery_slider_next',
+        prevArrow: '.gallery_slider_prev',
+        elementsPerPage: 4,
+        elementsPerPageMobile: 1.45,
+        duration: 5000,
+        rowGap: 15
+    });
+}
+
+if (document.querySelector('.consult') != null) {
+    modal('[data-modal]', 'data-close', '.consult');
+}
