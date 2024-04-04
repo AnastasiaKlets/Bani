@@ -1,88 +1,25 @@
-@media (max-width:1751px) {
-  .aboutUs{
-    &_ims{
-      width: 400px;
-      height: 400px;
-      img{
-        width: 400px;
-        height: 400px;
-      }
-    }
-  }
-}
-@media (max-width:1600px) {
-
-}
-@media (max-width:1440px) {
-  .aboutUs{
-    &_ims{
-      width: 330px;
-      height: 330px;
-      img{
-        width: 330px;
-        height: 330px;
-      }
-    }
-  }
-}
-@media (max-width: 1200px) {
-  .aboutUs{
-    &_ims{
-      width: 300px;
-      height: 300px;
-      img{
-        width: 300px;
-        height: 300px;
-      }
-    }
-  }
-}
-@media (max-width: 1045px) {
-  .aboutUs{
-    &_ims{
-      width: 280px;
-      height: 280px;
-      img{
-        width: 280px;
-        height: 280px;
-      }
-    }
-  }
-}
-
 @media (max-width: 768px) {
-  .aboutUs{
-    &_ims{
-      width: 250px;
-      height: 250px;
-      img{
-        width: 250px;
-        height: 250px;
-      }
+  .about{
+    margin-top: 35px;
+    &_titleAExampleImg{
+      margin-top: 35px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 13px;
+
     }
   }
 }
 @media (max-width: 578px) {
-  .aboutUs{
-    &_ims{
-      width: 200px;
-      height: 200px;
-      img{
-        width: 200px;
-        height: 200px;
-      }
+  .about{
+    margin-top: 30px;
+    &_titleAExampleImg{
+      margin-top: 20px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+
     }
   }
 }
 @media (max-width: 480px) {
-  .aboutUs{
-    &_ims{
-      width: 151px;
-      height: 151px;
-      img{
-        width: 151px;
-        height: 151px;
-      }
-    }
-  }
+
 }
