@@ -11,10 +11,16 @@
     &_content{
       width: 100%;
       &_inputs{
+        display: flex;
+        flex-direction: row-reverse;
+        width: 100%;
+        gap: 50px;
         &_filed{
           display: flex;
           flex-direction: column;
+          width: 100%;
           gap: 27px;
+          margin-right: 100px ;
           &_title{
             font-weight: 600;
           }
@@ -27,7 +33,6 @@
             align-items: center;
             height: 46px;
             font-weight: 400;
-
             width: 100%;
             color: #212529;
             background-color: #D9D9D9;
@@ -35,6 +40,10 @@
             border: #D9D9D9;
             padding: 12px 0;
             transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+            &_messenger{
+              height: 160px;
+              align-items: flex-start;
+            }
           }
           &_input::placeholder {
             color: #212529;
@@ -42,18 +51,38 @@
             padding-left: 12px;
             font-size: 18px;
           }
-
           &_input:focus {
             color: #212529;
             border-color: #bdbdbd;
             outline: 0;
             box-shadow: 0 0 0 0.2rem rgba(158, 158, 158, 0.25);
           }
-
           &_input:disabled,
           &_input[readonly] {
             background-color: #f5f5f5;
             opacity: 1;
+          }
+          &_text{
+            font-size: 14px;
+          }
+        }
+        &_inf{
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 30px;
+          &_block{
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            span{
+              font-weight: 500;
+            }
+            &_tel{
+              display: flex;
+              flex-direction: column;
+              gap: 10px ;
+            }
           }
         }
       }
@@ -62,10 +91,11 @@
         display: flex;
         width: 100%;
         align-items: center;
-        margin-top: 40px;
+        margin-top: 100px;
         img{
           position: absolute;
           right: 255px;
+          width: 14.5%;
         }
         iframe{
           width: 100%;

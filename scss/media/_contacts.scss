@@ -1,0 +1,73 @@
+@media (max-width:1720px) {
+  .contacts{
+    &_wrapper{
+      gap: 45px;
+      &_title{
+        margin-top: 45px;
+      }
+      &_content{
+        &_inputs{
+          gap: 45px;
+          &_filed{
+            gap: 23px;
+            margin-right: 85px;
+            &_nameNumber{
+              gap: 25px;
+            }
+            &_input{
+              height: 44px;
+              padding: 10px 0;
+              &_messenger{
+                height: 150px;
+              }
+            }
+            &_input::placeholder {
+              padding-left: 12px;
+              font-size: 18px;
+            }
+            &_text{
+              font-size: 14px;
+            }
+          }
+          &_inf{
+            gap: 30px;
+            &_block{
+              gap: 30px;
+              &_tel{
+                gap: 10px ;
+              }
+            }
+          }
+        }
+        &_map{
+          margin-top: 100px;
+          img{
+            right: 250px;
+
+          }
+          iframe{
+            height: 622px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width:1600px) {
+
+}
+@media (max-width:1440px) {
+
+}
+@media (max-width: 1200px) {
+
+}
+@media (max-width: 992px) {
+
+}
+@media (max-width: 768px) {
+
+}
+@media (max-width: 480px) {
+
+}
