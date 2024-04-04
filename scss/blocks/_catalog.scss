@@ -40,6 +40,7 @@
         }
     }
     &_menu-items {
+        margin-top: 4px;
         display: none;
     }
     &_menu-item {
@@ -77,6 +78,7 @@
             background: none;
             border: none;
             cursor: pointer;
+            outline: none;
             img {
                 padding-left: 10px;
             }
@@ -88,6 +90,10 @@
     }
     .semi-bold {
         margin-top: 19px;
+        a {
+            text-decoration: none;
+            color: #000;
+        }
     }
     .btn_main {
         margin-top: 15px;
