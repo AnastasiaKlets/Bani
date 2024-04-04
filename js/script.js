@@ -231,7 +231,6 @@ function modal(triggerSelector, closeSelector, modalSelector) {
     });
 }
 
-
 $("form").on( "submit", function( event ) {
     event.preventDefault();
     let name = event.target.classList.value.slice(0, -5);
