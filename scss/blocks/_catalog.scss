@@ -39,10 +39,51 @@
             align-items: center;
         }
     }
+    &_menu-items {
+        display: none;
+    }
+    &_menu-item {
+        position: relative;
+        padding: 18px 0 15px 28px;
+        border-bottom: 2px solid #d9d9d9;
+        cursor: pointer;
+        &::before {
+            position: absolute;
+            top:50%;
+            left: 9px;
+            transform:translate(0, -50%);
+            content: "";
+            width: 11px;
+            height: 11px;
+            border-radius: 100%;
+            background: #a4a4a4;
+        }
+    }
+    &_menu-item.active {
+        &::before {
+            background: #008a34;
+        }
+    }
     aside {
+        padding: 27px 25px 36px 16px;
         width: 25%;
+        background: rgba(217, 217, 217, 0.5);
+        border-radius: 10px;
+        button {
+            padding-left: 9px;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            background: none;
+            border: none;
+            cursor: pointer;
+            img {
+                padding-left: 10px;
+            }
+        }
     }
     .title_64 {
+        margin-top: 45px;
         text-align: center;
     }
     .semi-bold {

@@ -263,3 +263,24 @@ if (document.querySelector('.gallery_slider') != null) {
 if (document.querySelector('.consult') != null) {
     modal('[data-modal]', 'data-close', '.consult');
 }
+
+const menu = document.querySelectorAll('.catalog_menu'),
+    menu_items = document.querySelectorAll('.catalog_menu-items'),
+    menu_item = document.querySelectorAll('.catalog_menu-item');
+
+menu.forEach(item => {
+    item.addEventListener('click', (e) => {
+        menu_items.forEach(item => item.classList.remove('show'));
+        menu_item.forEach(item => item.classList.remove('active'));
+        const dropFor = item.getAttribute('drop-for');
+        let drop = document.getElementById(dropFor);
+        document.getElementById(dropFor).classList.add('show');
+    });
+});
+
+menu_item.forEach(item => {
+    item.addEventListener('click', (e) => {
+        menu_item.forEach(item => item.classList.remove('active'));
+        item.classList.add('active');
+    });
+});
