@@ -69,6 +69,7 @@
 		<div class="promo_wrapper">
 			<div class="promo_top">
 				<div class="promo_gradient top"></div>
+				<div class="promo_mobile"></div>
 				<div class="container">
 					<div class="promo_content">
 						<div class="promo_content_contact">
@@ -363,9 +364,10 @@
 	<div class="consult">
 		<div class="consult_modal">
 			<div class="consult_gradient"></div>
+			<div class="consult_mobile"></div>
 			<div class="consult_close"><img data-close src="icons/close.svg" alt="close"></div>
             <div class="consult_content">
-				<div class="title title_40 semi-bold">Оставить заявку</div>
+				<div class="title title_40 arkhip">Оставить заявку</div>
 				<div class="title">Введите ваш номер телефона<br>и мы Вам перезвоним в течение <span class="medium">10 минут</span></div>
 				<form class="consult_form" action="#">
 					<div class="consult_form_content">
@@ -383,11 +385,27 @@
 					</div>
 				</form>
 			</div>
-      <div class="consult_image">
-        <img src="img/consult_bg_1.png" alt="consult_bg">
-      </div>
+			<div class="consult_image">
+				<img src="img/consult_bg_1.png" alt="consult_bg">
+			</div>
 		</div>
 	</div>
-  <script src="js/script.js"></script>
+	<div class="thanks">
+		<div class="thanks_modal">
+			<div class="thanks_gradient"></div>
+			<div class="thanks_gradient top"></div>
+			<div class="thanks_close" onclick='closeModal(".thanks"); location="#promo"'><img data-close src="icons/close.svg" alt="close"></div>
+            <div class="thanks_content">
+				<div class="title title_40 arkhip">Спасибо</div>
+				<div class="title title_24 arkhip">Ваша заявка<span class="br"></span>успешно оформлена</div>
+				<div class="title">Мы свяжемся с Вами<span class="br"></span>в течение <span class="semi-bold">10 минут</span></div>
+			</div>
+			<div class="thanks_image">
+				<img src="img/consult_bg_2.png" alt="consult_bg">
+			</div>
+		</div>
+	</div>
+	<script src="js/jquery-3.7.1.min.js"></script>
+  	<script src="js/script.js"></script>
 </body>
 </html>

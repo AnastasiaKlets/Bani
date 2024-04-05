@@ -1,15 +1,3 @@
-ScrollTrigger.batch("section > div", {
-    interval: 0.1,
-    batchMax: 3,
-    onEnter: (batch) =>
-        gsap.to(batch, { autoAlpha: 1, stagger: 0.15, overwrite: true }),
-    onLeave: (batch) => gsap.set(batch, { autoAlpha: 0, overwrite: true }),
-    onEnterBack: (batch) =>
-        gsap.to(batch, { autoAlpha: 1, stagger: 0.15, overwrite: true }),
-    onLeaveBack: (batch) => gsap.set(batch, { autoAlpha: 0, overwrite: true }),
-});
-
-
 function slider({container, wrapper, field, slide, indicatorsSelector, elementsPerPage = 1, elementsPerPageMobile = 1, duration = 0, rowGap = 0}) {
     let slideIndex = 1,
         offset = 0,
@@ -114,6 +102,38 @@ function slider({container, wrapper, field, slide, indicatorsSelector, elementsP
 
     makeTimer(duration);
 
+    function moveNext() {
+        if (offset == deleteNotDigits(width) * (slides.length - 1)) {
+			offset = 0;
+		} else {
+			offset += deleteNotDigits(width);
+		}
+
+		if (slideIndex == slides.length) {
+			slideIndex = 1;
+		} else {
+			slideIndex++;
+		}
+
+        changeActivity();
+    }
+
+    function movePrev() {
+        if (offset == 0) {
+			offset = deleteNotDigits(width) * (slides.length - 1);
+		} else {
+			offset -= deleteNotDigits(width);
+		}
+
+		if (slideIndex == 1) {
+			slideIndex = slides.length;
+		} else {
+			slideIndex--;
+		}
+
+        changeActivity();
+    }
+
     function changeActivity() {
         slidesField.style.transform = `translateX(-${offset}px)`;
         dots.forEach(dot => dot.classList.remove('active'));
@@ -125,26 +145,45 @@ function slider({container, wrapper, field, slide, indicatorsSelector, elementsP
             return;
         }
         clearInterval(timer)
-        timer = setInterval(function(){
-            if (offset == deleteNotDigits(width) * (slides.length - 1)) {
-                offset = 0;
-            } else {
-                offset += deleteNotDigits(width);
-            }
-    
-            if (slideIndex == slides.length) {
-                slideIndex = 1;
-            } else {
-                slideIndex++;
-            }
-    
-            changeActivity();
-        },duration);
+        timer = setInterval(() => moveNext(), duration);
     }
 
     function deleteNotDigits(str) {
         return +str.replace(/[^\d\.]/g, '');
     }
+
+    let startX;
+    let endX;
+
+    const start = (e) => {
+        startX = e.pageX || e.touches[0].pageX;	
+    }
+
+    const end = () => {
+        if (endX < startX) {
+            moveNext();
+            makeTimer(duration);
+        }  
+        if (endX > startX) {
+            movePrev();
+            makeTimer(duration);
+        }
+    }
+
+    const move = (e) => {
+        e.preventDefault();
+        endX = e.pageX || e.touches[0].pageX;
+    }
+
+    slidesField.addEventListener('mousedown', start);
+    slidesField.addEventListener('touchstart', start);
+
+    slidesField.addEventListener('mousemove', move);
+    slidesField.addEventListener('touchmove', move);
+
+    slidesField.addEventListener('mouseleave', end);
+    slidesField.addEventListener('mouseup', end);
+    slidesField.addEventListener('touchend', end);
 }
 
 function openModal(modalSelector) {
@@ -181,18 +220,55 @@ function modal(triggerSelector, closeSelector, modalSelector) {
     });
 }
 
-slider({
-    container: '.gallery_slider',
-    wrapper: '.gallery_slider_wrapper',
-    field: '.gallery_slider_inner',
-    slide: '.gallery_slide',
-    indicatorsSelector: 'gallery_slider_indicators',
-    nextArrow: '.gallery_slider_next',
-    prevArrow: '.gallery_slider_prev',
-    elementsPerPage: 4,
-    elementsPerPageMobile: 1.45,
-    duration: 5000,
-    rowGap: 15
+$("form").on( "submit", function( event ) {
+    event.preventDefault();
+    let name = event.target.classList.value.slice(0, -5);
+    $(`.${name}_form`).trigger('reset');
+    closeModal(`.${name}`)
+    openModal('.thanks');
+    setTimeout(function(){
+        closeModal('.thanks');
+        location="#promo";
+    }, 15000)
 });
 
-modal('[data-modal]', 'data-close', '.consult');
+if (document.querySelector('.gallery_slider') != null) {
+    slider({
+        container: '.gallery_slider',
+        wrapper: '.gallery_slider_wrapper',
+        field: '.gallery_slider_inner',
+        slide: '.gallery_slide',
+        indicatorsSelector: 'gallery_slider_indicators',
+        nextArrow: '.gallery_slider_next',
+        prevArrow: '.gallery_slider_prev',
+        elementsPerPage: 4,
+        elementsPerPageMobile: 1.45,
+        duration: 5000,
+        rowGap: 15
+    });
+}
+
+if (document.querySelector('.consult') != null) {
+    modal('[data-modal]', 'data-close', '.consult');
+}
+
+const menu = document.querySelectorAll('.catalog_menu'),
+    menu_items = document.querySelectorAll('.catalog_menu-items'),
+    menu_item = document.querySelectorAll('.catalog_menu-item');
+
+menu.forEach(item => {
+    item.addEventListener('click', (e) => {
+        menu_items.forEach(item => item.classList.remove('show'));
+        menu_item.forEach(item => item.classList.remove('active'));
+        const dropFor = item.getAttribute('drop-for');
+        let drop = document.getElementById(dropFor);
+        document.getElementById(dropFor).classList.add('show');
+    });
+});
+
+menu_item.forEach(item => {
+    item.addEventListener('click', (e) => {
+        menu_item.forEach(item => item.classList.remove('active'));
+        item.classList.add('active');
+    });
+});
