@@ -1,26 +1,19 @@
-
-section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  margin: 0 auto;
-  max-width: 90%;
-}
-section > div {
-  width: 30%;
-  opacity: 0;
-}
-.aboutUs{
-  &_ims{
-    width: 512px;
-    height: 512px;
+.about{
+  margin-top: 50px;
+  &_titleAExample{
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-}
-.titleAExample{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 50px 0;
+  &_titleAExampleImg{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    .aboutUs_ims{
+      img{
+        width: 100%;
+      }
+    }
+  }
 }

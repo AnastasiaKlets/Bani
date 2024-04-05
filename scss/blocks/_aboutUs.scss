@@ -1,0 +1,31 @@
+.aboutUs{
+  margin-top: 50px;
+  &_wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    img{
+      width: 100%;
+    }
+    &_title{
+      display: flex;
+      justify-content: center;
+    }
+    &_textImg{
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      span{
+        font-weight: 500;
+        text-align: center;
+      }
+      &_title{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+      }
+    }
+
+  }
+}
