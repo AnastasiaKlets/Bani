@@ -1,0 +1,125 @@
+@media (max-width:1720px) {
+
+}
+@media (max-width:1600px) {
+
+}
+@media (max-width:1440px) {
+
+}
+@media (max-width: 1200px) {
+    .product {
+        &_tab {
+            &_item {
+                font-size: 17px;
+            }
+        }
+    }
+}
+@media (max-width: 992px) {
+    .product {
+        &_wrapper {
+            margin-top: 18px;
+            flex-direction: column;
+        }
+        &_images {
+            width: 100%;
+            &_bottom {
+                margin-top: 9px;
+            }
+        }
+        &_descr {
+            width: 100%;
+            &_item {
+                margin-top: 10px;
+                padding: 9px;
+                gap: 10px;
+            }
+            &_icon {
+                gap: 9px;
+                font-size: 15px;
+                img {
+                    width: 20px;
+                }
+            }
+            &_bottom {
+                margin-top: 35px;
+            }
+            .title_32 {
+                display: none;
+            }
+        }
+        &_price {
+            margin-top: 15px;
+            gap: 10px;
+        }
+        &_tab {
+            margin-top: 35px;
+            padding-bottom: 110px;
+            &_wrapper {
+                margin-top: 15px;
+                min-height: 154px;
+            }
+            &_header {
+                padding: 11px 14px;
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+            &_item {
+                gap: 5px;
+                font-size: 14px;
+                img {
+                    width: 21px;
+                }
+            }
+            &_row {
+                padding: 13px;
+                width: calc(100% - 26px);
+            }
+        }
+        .btn_main {
+            margin-top: 26px;
+            width: 100%;
+        }
+        .mobile {
+            display: block;
+        }
+    }    
+}
+@media (max-width: 768px) {
+
+}
+@media (max-width: 480px) {
+    .product {
+        &_descr {
+            &_icon {
+                font-size: 10px;
+                img {
+                    width: 15px;
+                }
+            }
+            &_value {
+                font-size: 10px;
+            }
+        }
+        &_tab {
+            &_item {
+                font-size: 10px;
+                img {
+                    width: 12px;
+                }
+            }
+            &_content {
+                .title {
+                    font-size: 12px;
+                }
+            }
+        }
+        .br {
+            display: block;
+        }
+        .links_hierarchy {
+            flex-wrap: wrap;
+        }
+    }
+}

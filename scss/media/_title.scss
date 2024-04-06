@@ -4,6 +4,9 @@
         &_24 {
             font-size: 22px;
         }
+        &_32 {
+            font-size: 32px;
+        }
         &_36{
             font-size: 33px;
         }
@@ -23,6 +26,9 @@
         font-size: 18px;
         &_24 {
             font-size: 20px;
+        }
+        &_32 {
+            font-size: 30px;
         }
         &_36{
             font-size: 30px;
@@ -44,6 +50,9 @@
         &_24 {
             font-size: 18px;
         }
+        &_32 {
+            font-size: 30px;
+        }
         &_36{
             font-size: 27px;
         }
@@ -63,6 +72,9 @@
         font-size: 16px;
         &_24 {
             font-size: 16px;
+        }
+        &_32 {
+            font-size: 28px;
         }
         &_36{
             font-size: 24px;
@@ -84,6 +96,9 @@
         &_24 {
             font-size: 15px;
         }
+        &_32 {
+            font-size: 26px;
+        }
         &_36{
             font-size: 21px;
         }
@@ -97,12 +112,20 @@
             font-size: 32px;
         }
     }
+    .descr {
+        &_16 {
+            font-size: 12px;
+        }
+    }
 }
 @media (max-width: 768px) {
     .title {
         font-size: 14px;
         &_24 {
             font-size: 14px;
+        }
+        &_32 {
+            font-size: 24px;
         }
         &_36{
             font-size: 18px;
@@ -123,6 +146,9 @@
         font-size: 14px;
         &_24 {
             font-size: 14px;
+        }
+        &_32 {
+            font-size: 24px;
         }
         &_36{
             font-size: 16px;

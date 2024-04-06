@@ -2,7 +2,7 @@
     &_wrapper {
         margin-top: 69px;
         display: flex;
-        gap: 4%;
+        gap: 35px 4%;
     }
     &_images {
         width: 48%;
@@ -44,8 +44,10 @@
         &_icon {
             display: flex;
             align-items: center;
+            padding-right: 20px;
             gap: 22px;
-            width: 36%;
+            min-width: 36%;
+            font-size: 20px;
         }
         &_value {
             display: flex;
@@ -55,7 +57,7 @@
         &_bottom {
             margin-top: 32px;
         }
-        .title_16 {
+        .descr_16 {
             margin-top: 11px;
         }
         .title_32 {
@@ -70,6 +72,10 @@
         &_text {
             font-weight: 600;
             font-size: 16px;
+        }
+        &_value {
+            font-weight: 600;
+            font-size: 24px;
         }
     }
     &_tab {
@@ -90,6 +96,7 @@
             display: flex;
             align-items: center;
             gap: 10px;
+            font-size: 20px;
             font-weight: 600;
         }
         &_row {
@@ -114,5 +121,11 @@
     .btn_main {
         margin-top: 35px;
         width: 46%;
+    }
+    .mobile {
+        display: none;
+    }
+    .br {
+        display: none;
     }
 }
